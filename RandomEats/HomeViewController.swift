@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
