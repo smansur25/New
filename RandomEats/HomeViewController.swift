@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewController {
+class HomeViewController: UICollectionViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+  //  @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +20,13 @@ class HomeViewController: UIViewController, UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("MenuCell", forIndexPath: indexPath)
+        return cell
     }
     
 
@@ -32,5 +39,5 @@ class HomeViewController: UIViewController, UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
